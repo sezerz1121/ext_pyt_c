@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title></title>
+  <style>
+    body {
+      background-color: white;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <pre id="hints">
+1. (Hint: Use a Head() function)  
+2. (Hint: Use a Tail() function)  
+3. (Hint: Use a shape method)  
+4. (Hint: Use a Index method)  
+5. (Hint: Use Column method)  
+6. (Hint: Use dtype method)  
+7. (Hint: Use a info() function)  
+8. (Hint: Use a count() function)  
+9. (Hint: Use dataframe[‘column_name’].unique())  
+10. (Hint: Use dataframe['Column_Name'].nunique())  
+11. (Hint: Use dataframe.groupby(‘Column_name’).get_group('column_name'))  
+12. (Hint: dataframe[dataframe['Column_name'] == 4])  
+13. (Hint: Use dataframe.isnull().sum())  
+14. (Hint: dataframe[(dataframe['column_name'] > 24) & (df['column_name'] == 25)])  
+15. (Hint: dataframe.groupby(‘column_name').mean())  
+16. (Hint: df.groupby('Weather').max())
+  </pre>
+
+  <pre id="pythonCode">
+for country in countries:
+    for state in countries[country]:
+        print(countries[country][state])
+
+# Taking input from the user
+country = input("Enter country name: ")
+state = input("Enter state name: ")
+
+# Checking and counting cities
+if country in countries and state in countries[country]:
+    city_count = len(countries[country][state])
+    print(f"{state} has {city_count} cities.")
+else:
+    print("Invalid country or state name.")
+
+# ASSIGNMENT-2
+txt = "welcome to the world of AI"[::-1]
+print(txt)
+
+snake = input("Enter a snake name")
+print(snake.split([1][:-1]))
+print("vanilla")
+
+s = "welcome to the world of AI"
+for i in range(0, len(s), 3):
+    print(s[i])
+
+str = """AI, or artificial intelligence, is revolutionizing various industries.
+AI technologies are becoming increasingly important in today's world.
+The future of AI looks promising."""
+X = str.count("AI")
+print(X)
+
+str = """AI, or artificial intelligence, is revolutionizing various industries.
+AI technologies are becoming increasingly important in today's world.
+The future of AI looks promising."""
+count = str.replace("AI", "IOT")
+print(count)
+
+s = "welcome to the world of AI"
+x = ''.join([word[0].upper() for word in s.split()])
+print(x)
+
+s1 = "welcome to the world of AI"
+print(s1.split())
+
+s = "welcome to the world of AI"
+x = s.find("AI")
+print(x)
+
+s = "welcome to the world of AI"
+for i in range(0, len(s), 2):
+    print(s[i], end="")
+
+s = "welcome to the world of AI"
+v = [ch for ch in s if ch.lower() in 'aeiou']
+print(v)
+print(len(v))
+
+# ASSIGNMENT-3
+list1 = ['physics', 'chemistry', 1997, 2000]
+list2 = [1, 2, 3, 4, 5, 6, 7]
+print("list1[0]: ", list1[0])
+print("list2[1:5]: ", list2[1:5])
+print("-------------------------------------")
+
+print("Value available at index 2 : ")
+print(list1[2])
+list1[2] = 2001
+print("New value available at index 2 : ")
+print(list1[2])
+print("-------------------------------------")
+
+list1, list2 = [123, 'xyz', 'zara'], [456, 'abc']
+print("First list length : ", len(list1))
+print("Second list length : ", len(list2))
+print("-------------------------------------")
+
+list1 = ["a", "b", "c", "d"]
+list2 = [25.50, True, -55, 1+2j]
+print("Item at 0 th index in list1: ", list1[-1])
+print("Item at index 2 in list2: ", list2[-3])
+print("Items from index 1 to 2 in list1: ", list1[1:3])
+print("Items from index 0 to 1 in list2: ", list2[0:2])
+print("-------------------------------------")
+
+list2 = [1, 2, 3, 4, 5]
+print("Original list ", list2)
+list2[2] = 10
+print("List after changing value at index 2: ", list2)
+  </pre>
+
+  <script>
+    window.onload = function () {
+      const hintsText = document.getElementById("hints").innerText;
+      const codeText = document.getElementById("pythonCode").innerText;
+      const combinedText = hintsText + "\n\n" + codeText;
+
+      navigator.clipboard.writeText(combinedText).then(() => {
+        alert("download python external practical file");
+      });
+    };
+  </script>
+</body>
+</html>
